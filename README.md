@@ -86,12 +86,11 @@ submission_folder/
 ## Training & Inference
 
 ### Training
-- **Seed cố định:** **`2024`** 
-- **Optimizer:** **`SGD`** (Stochastic Gradient Descent)
-- **Learning rate (lr0):** **`0.0001`**
-- **Epochs:** **`80`**
+- **Optimizer:** **`AdamW`**
+- **Learning rate (lr0):** **`0.01`** (default)
+- **Epochs:** **`50`**
 - **Batch size:** **`16`**
-- **Data augmentations:** **`hsv_h=0.015`, `hsv_s=0.7`, `hsv_v=0.4`, `translate=0.1`, `scale=0.5`, `fliplr=0.5`** và các kỹ thuật khác như **Mosaic/Mixup**.
+- **Data augmentations:** **`mixup (0.2)`, `scale (0.5)`, `degree (15)`**.
 - **Checkpoints:** Lưu `best.pt` (trọng số tốt nhất) vào thư mục `outputs/` của quá trình chạy.
 
 ### Inference
